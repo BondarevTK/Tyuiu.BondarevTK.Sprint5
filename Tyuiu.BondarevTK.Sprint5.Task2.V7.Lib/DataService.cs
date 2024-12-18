@@ -22,7 +22,15 @@ namespace Tyuiu.BondarevTK.Sprint5.Task2.V7.Lib
                 string res = "";
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    res = res + matrix[i, j] + ';';
+                    if (j == matrix.GetLength(1) - 1)
+                    {
+                        res = res + matrix[i, j];
+                    }
+                    else
+                    {
+                        res = res + matrix[i, j] + ';';
+                    }
+                    
                 }
                 File.AppendAllText(path, res + Environment.NewLine);
             }
