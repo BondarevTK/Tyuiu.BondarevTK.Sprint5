@@ -7,7 +7,7 @@ namespace Tyuiu.BondarevTK.Sprint5.Task0.V18.Lib
         {
             string path = Path.GetTempFileName();
             double z = x / Math.Sqrt(Math.Pow(x,2) + x);
-            z = Math.Round(z, 2);
+            z = Math.Round(z, 3);
             File.WriteAllText(path, Convert.ToString(z));
             return path;
         }
