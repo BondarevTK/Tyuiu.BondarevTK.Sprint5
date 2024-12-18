@@ -17,6 +17,7 @@ namespace Tyuiu.BondarevTK.Sprint5.Task1.V11.Lib
                     
                 }
                 res = (Math.Sin(x) - 2 * x) / (3 * x - 1) + Math.Sin(x) - 3 * x + 2;
+                res = Math.Round(res, 2);
                 File.AppendAllText(path,Convert.ToString(res) + Environment.NewLine);
             }
             return path;
