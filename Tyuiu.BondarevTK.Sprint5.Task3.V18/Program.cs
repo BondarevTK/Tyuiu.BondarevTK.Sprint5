@@ -1,4 +1,5 @@
-﻿using Tyuiu.BondarevTK.Sprint5.Task3.V18.Lib;
+﻿using System.Text;
+using Tyuiu.BondarevTK.Sprint5.Task3.V18.Lib;
 namespace Tyuiu.BondarevTK.Sprint5.Task3.V18
 {
     internal class Program
@@ -8,12 +9,14 @@ namespace Tyuiu.BondarevTK.Sprint5.Task3.V18
             DataService ds = new DataService();
             int x = 2;
             string res = ds.SaveToFileTextData(x);
-            StreamReader sr = new StreamReader(res);
-            string line = sr.ReadLine();
+            StreamReader br = new StreamReader(res);
+            string line = br.ReadLine();
             while (line != null)
             {
+                byte[] bytes = Encoding.UTF8.GetBytes(line);
+                line = Convert.ToBase64String(bytes);
                 Console.WriteLine(line);
-                line = sr.ReadLine();
+                line = br.ReadLine();
             }
         }
     }
