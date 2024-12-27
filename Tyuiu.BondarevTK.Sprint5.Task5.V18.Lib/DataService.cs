@@ -10,12 +10,12 @@ namespace Tyuiu.BondarevTK.Sprint5.Task5.V18.Lib
             double res = 1;
             foreach (string s in strings)
             {
-                if (Double.TryParse(s.Trim(), out double number) && Math.Abs(number) > 9 && Math.Abs(number) < 100)
+                if (Double.TryParse(s, out double number) && Math.Abs(number) > 9 && Math.Abs(number) < 100)
                 {
                     res = res * number;
                 }
             }
-            return res;
+            return Math.Round(res,3);
         }
     }
 }
