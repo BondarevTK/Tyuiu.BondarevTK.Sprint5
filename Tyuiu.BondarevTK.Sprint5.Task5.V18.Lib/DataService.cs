@@ -6,7 +6,7 @@ namespace Tyuiu.BondarevTK.Sprint5.Task5.V18.Lib
         public double LoadFromDataFile(string path)
         {
             string text = File.ReadAllText(path);
-            string[] strings = text.Split(",");
+            string[] strings = text.Split(" ");
             double res = 1;
             foreach (string s in strings)
             {
