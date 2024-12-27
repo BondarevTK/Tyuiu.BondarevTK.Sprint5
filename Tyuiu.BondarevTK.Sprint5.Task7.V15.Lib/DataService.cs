@@ -5,7 +5,7 @@ namespace Tyuiu.BondarevTK.Sprint5.Task7.V15.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string savepath = $@"{Directory.GetCurrentDirectory()}/OutPutDataFileTask7V15.txt";
+            string savepath = $@"{Path.GetTempPath()}/OutPutDataFileTask7V15.txt";
             string text = File.ReadAllText(path);
             string[] strings = text.Split(new char[] {' ', '.'});
             for (int i = 0; i < strings.Length; i++)
