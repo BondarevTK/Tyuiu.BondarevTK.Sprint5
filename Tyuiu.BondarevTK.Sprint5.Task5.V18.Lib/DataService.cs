@@ -10,7 +10,7 @@ namespace Tyuiu.BondarevTK.Sprint5.Task5.V18.Lib
             double res = 1;
             foreach (string s in strings)
             {
-                if (int.TryParse(s.Trim(), out int number) && number > 9 && number < 100)
+                if (int.TryParse(s.Trim(), out int number) && Math.Abs(number) > 9 && Math.Abs(number) < 100)
                 {
                     res *= number;
                 }

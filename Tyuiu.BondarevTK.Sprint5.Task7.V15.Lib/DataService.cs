@@ -12,12 +12,10 @@ namespace Tyuiu.BondarevTK.Sprint5.Task7.V15.Lib
             {
                 if (strings[i].Length == 2)
                 {
-                    strings[i] = ",";
+                    strings[i] = "";
                 }
             }
-            string res1 = string.Join(",", strings);
-            string[] strings1 = res1.Split(new char[] { ' ', ',' });
-            string res = string.Join(" ", strings1);
+            string res = string.Join(" ", strings);
             File.WriteAllText(savepath, res);
             return savepath;
         }
