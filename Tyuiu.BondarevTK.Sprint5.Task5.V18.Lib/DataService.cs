@@ -12,7 +12,7 @@ namespace Tyuiu.BondarevTK.Sprint5.Task5.V18.Lib
             {
                 if (Double.TryParse(s.Trim(), out double number) && Math.Abs(number) > 9 && Math.Abs(number) < 100)
                 {
-                    res *= number;
+                    res = res * number;
                 }
             }
             return res;
