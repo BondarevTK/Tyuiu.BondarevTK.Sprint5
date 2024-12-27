@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Text.RegularExpressions;
+using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.BondarevTK.Sprint5.Task7.V15.Lib
 {
     public class DataService : ISprint5Task7V15
@@ -15,7 +16,8 @@ namespace Tyuiu.BondarevTK.Sprint5.Task7.V15.Lib
                     strings[i] = "";
                 }
             }
-            string res = string.Join(" ", strings);
+            string res1 = string.Join(" ", strings);
+            string res = Regex.Replace(res1, " {2,}", " ");
             File.WriteAllText(savepath, res);
             return savepath;
         }
