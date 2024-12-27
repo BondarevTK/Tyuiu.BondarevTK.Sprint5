@@ -15,7 +15,7 @@ namespace Tyuiu.BondarevTK.Sprint5.Task7.V15.Lib
                     strings[i] = "";
                 }
             }
-            string res = string.Join(" ", strings)+".";
+            string res = string.Join(" ", strings);
             File.WriteAllText(savepath, res);
             return savepath;
         }
